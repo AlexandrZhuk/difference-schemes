@@ -1,0 +1,6 @@
+set xlabel "X" 
+set ylabel "Y" 
+set zlabel "Z" 
+set grid 
+splot './data/1.txt.100.20.0.500000.txt' matrix using ($1/((40))):($2/((100))):3 with lines
+pause 10000

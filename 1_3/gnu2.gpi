@@ -1,0 +1,13 @@
+set term gif animate 1 loop 0
+set output "graph.gif"
+set xlabel "t" 
+set ylabel "x" 
+set zlabel "u" 
+set grid 
+splot './data/0.txt' matrix with lines
+do for [i=0:9]{ 
+splot sprintf('./data/%d.txt', i) matrix using ($1/(2*(i+1))):2:($3/(10*(i+1))) with lines
+pause 1 
+}
+pause 1 
+unset output
