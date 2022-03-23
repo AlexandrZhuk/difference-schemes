@@ -23,7 +23,13 @@ TYPE f(TYPE x){
 	return -x*x+x;//+ eps*x;
 }
 //-x^2+x /1
-
+struct grid
+{
+	int N;
+	int M;
+	static TYPE **u;
+	
+};
 
 //TYPE u[N][M];
 //TYPE **u;
